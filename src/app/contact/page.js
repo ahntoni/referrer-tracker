@@ -1,15 +1,32 @@
 "use client"
 import Tracker from "@/components/tracker";
+import Link from "next/link";
 
 export default function Contact() {
   return (
     <div>
-      <Tracker/>
+      <Tracker />
       <h1> Contact Page</h1>
       <nav>
-        <a href="/">Go to Home</a>
+        <Link
+          href="/"
+          onClick={(e) => {
+            e.preventDefault();
+            window.location.href = "/";
+          }}
+        >
+          Go to Home
+        </Link>
         <br />
-        <a href="/about">Go to About</a>
+        <Link
+          href="/about"
+          onClick={(e) => {
+            e.preventDefault();
+            window.location.href = "/about";
+          }}
+        >
+          Go to About
+        </Link>
       </nav>
     </div>
   );
