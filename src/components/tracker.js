@@ -10,8 +10,8 @@ export default function Tracker(){
 
   const source =
     utmSource ??
-    document.referrer ??
-    "direct or referrer disabled";
+    (document.referrer ||
+    "direct or referrer disabled");
 
   console.log("Traffic source:", source);
 }, []);
