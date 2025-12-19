@@ -9,9 +9,9 @@ export default function Tracker(){
   const utmSource = urlParams.get("utm_source");
 
   const source =
-    utmSource ||
-    document.referrer ||
-    "direct";
+    utmSource ??
+    document.referrer ??
+    "direct or referrer disabled";
 
   console.log("Traffic source:", source);
 }, []);
